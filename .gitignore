@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+database/*.db
+database/*.db-*
+storage/*
+!storage/.gitkeep
+backend/tests/.tmp/
+*.log
+.DS_Store
+coverage/
+samples/*.jpg
+frontend/dist/
+
+# Project documentation kept local (repository is public)
+docs/

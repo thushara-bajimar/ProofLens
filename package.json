@@ -1,0 +1,29 @@
+{
+  "name": "prooflens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ProofLens \u00e2\u20ac\u201d media provenance that survives the screenshot",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "setup": "node scripts/generate-keys.mjs && node scripts/setup-models.mjs && node scripts/fetch-samples.mjs",
+    "keys": "node scripts/generate-keys.mjs",
+    "models": "node scripts/setup-models.mjs",
+    "samples": "node scripts/fetch-samples.mjs",
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "start": "npm run start -w backend",
+    "build": "npm run build -w frontend",
+    "test": "npm test -w backend",
+    "evaluate": "node scripts/evaluate.mjs",
+    "seed": "node scripts/seed-demo.mjs",
+    "test:all": "npm test -w backend && npm run build -w frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "prooflens-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@contentauth/c2pa-node": "^0.12.1",
+    "@peculiar/x509": "^3.1.0",
+    "better-sqlite3": "^13.2.0",
+    "dotenv": "^18.0.10",
+    "exif-reader": "^2.0.3",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.4",
+    "helmet": "^8.3.0",
+    "multer": "^2.5.0",
+    "reflect-metadata": "^0.2.2",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.2",
+    "vitest": "^5.1.0"
+  }
+}
